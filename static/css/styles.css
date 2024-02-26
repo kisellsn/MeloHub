@@ -14,9 +14,12 @@ a{
 footer a {
     color: black;
 }
-footer p {
+footer ol {
     color: black;
     text-align: right;
+}
+ol {
+    list-style-type: none;
 }
 header {
     display: flex;
@@ -146,7 +149,9 @@ main{
 }
 /* ----------------------BUTTON END------------------------*/
 
-
+ul {
+    list-style-type: none;
+}
 #lower_part{
     background-color: #ffffffcf;
     font-family: 'Montserrat', monospace;
