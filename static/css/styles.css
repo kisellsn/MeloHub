@@ -1,0 +1,171 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-top: black;
+    height: 100px;
+    padding-right: 20px;
+    padding-left:45%;
+}
+a{
+    text-decoration: none;
+}
+footer a {
+    color: black;
+}
+footer p {
+    color: black;
+    text-align: right;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+header a {
+    color: white;
+}
+nav a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+header a:hover {
+    color: #abcdef;
+}
+.logo{
+    display: flex;
+    font-weight: bolder;
+}
+.image_logo{
+    width: 50px;
+    padding-right:10px;
+}
+#search_icon_div{
+    width: 158px;
+    display: flex;
+    justify-content: flex-end;
+}
+#search_icon{
+    width: 26px;
+    margin-right: 40px;
+}
+*{
+    font-size: 15px;
+
+}
+body{
+    margin: 0;
+    min-width: 1200px;
+    background-image: linear-gradient(to right top, #e57db8, #d785c9, #c68ed7, #b397e0, #9f9fe6, #87a4e7, #70a7e5, #5aaadf, #39aad3, #1da8c3, #16a6b0, #29a29c);
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+#upper_part{
+    min-height: 570px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', monospace;
+}
+.title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 0;
+}
+.subtitle{
+    text-align: center;
+    color: #ffffffc4;
+    margin-top: 10px;
+}
+.table{
+    width: 70%;
+    padding: 20px;
+    margin-top: 20px;
+}
+#table_right_side{
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    height: 273px;
+    padding: 30px;
+    color: white;
+    width: 591px;
+}
+#table_right_side h2{
+    font-size: 29px;
+}
+
+#song_covers_icon{
+    width: 400px;
+    object-fit: cover;
+}
+/* ----------------------BUTTON ------------------------*/
+.button-54 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    margin-top: 70px;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+/* ----------------------BUTTON END------------------------*/
+
+
+#lower_part{
+    background-color: #ffffffcf;
+    font-family: 'Montserrat', monospace;
+    padding: 40px;
+}
+
+#new_releases_title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+#new_releases{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.track_cover{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
