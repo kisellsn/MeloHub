@@ -21,50 +21,10 @@ footer ol {
 ol {
     list-style-type: none;
 }
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-header a {
-    color: white;
-}
-nav a{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-header a:hover {
-    color: #abcdef;
-}
-.logo{
-    display: flex;
-    font-weight: bolder;
-}
-.image_logo{
-    width: 50px;
-    padding-right:10px;
-}
-#search_icon_div{
-    width: 145px;
-    display: flex;
-    justify-content: flex-end;
-}
-#search_icon{
-    width: 26px;
-    margin-right: 30px;
-}
-*{
-    font-size: 15px;
 
-}
 body{
     margin: 0;
-    min-width: 1200px;
+    min-width: 1000px;
     background-image: linear-gradient(to right top, #e57db8, #d785c9, #c68ed7, #b397e0, #9f9fe6, #87a4e7, #70a7e5, #5aaadf, #39aad3, #1da8c3, #16a6b0, #29a29c);
 }
 main{
@@ -116,39 +76,6 @@ main{
     width: 400px;
     object-fit: cover;
 }
-/* ----------------------BUTTON ------------------------*/
-.button-54 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000;
-    cursor: pointer;
-    border: 3px solid;
-    padding: 0.25em 0.5em;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-
-    margin-top: 70px;
-}
-
-.button-54:active {
-  box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
-}
-
-@media (min-width: 768px) {
-  .button-54 {
-    padding: 0.25em 0.75em;
-  }
-}
-/* ----------------------BUTTON END------------------------*/
-
 ul {
     list-style-type: none;
 }
