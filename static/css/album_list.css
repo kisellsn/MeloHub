@@ -24,46 +24,26 @@ main{
 
 
 }
+
 .catalogue_section {
     display: flex;
     flex-flow: row wrap;
-    padding-left: 20px;
-    gap: 1em;
+    padding-left: 30px;
+    gap: 3em;
 }
-h2{
+h2 {
     padding-top: 40px;
     padding-bottom: 10px;
-    font-size:23px;
+    font-size: 23px;
     color: #845f7f;
     font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
-.category_btn {
-    width: 130px;
-    height: 60px;
-    align-items: center;
-    background: #e6e6f0;
-    border: 0;
-    border-radius: 24px;
-    box-shadow: -10px -10px 30px 0 #fff, 10px 10px 30px 0 #1d0dca17;
-    box-sizing: border-box;
-    color: #2a1f62;
+
+.album_cover{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.album {
     cursor: pointer;
-    display: flex;
-    font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-    font-size: 1rem;
-    justify-content: center;
-    line-height: 1.5rem;
-    padding: 15px;
-    position: relative;
-    text-align: left;
-    transition: .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
 }
-
-.category_btn:hover {
-    background: #ebebf4;
-    box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
-}
-
