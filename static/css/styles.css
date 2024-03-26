@@ -24,7 +24,6 @@ ol {
 
 body{
     margin: 0;
-    min-width: 1000px;
     background-image: linear-gradient(to right top, #e57db8, #d785c9, #c68ed7, #b397e0, #9f9fe6, #87a4e7, #70a7e5, #5aaadf, #39aad3, #1da8c3, #16a6b0, #29a29c);
 }
 main{
@@ -52,9 +51,11 @@ main{
     margin-top: 10px;
 }
 .table{
-    width: 70%;
+    width: 90%;
     padding: 20px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
 }
 #table_right_side{
     background: rgba(255, 255, 255, 0.21);
@@ -63,7 +64,6 @@ main{
     backdrop-filter: blur(5.7px);
     -webkit-backdrop-filter: blur(5.7px);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    height: 273px;
     padding: 30px;
     color: white;
     width: 591px;
@@ -100,4 +100,33 @@ ul {
     width: 200px;
     height: 200px;
     object-fit: cover;
+}
+
+
+@media(max-width: 1000px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+    .album-art {
+        width: 100%;
+        img {
+            width: auto;
+            max-width: 100%;
+            display: block;
+        }
+    }
+    .album-details {
+        float: left;
+        max-width: 100%;
+    }
+}
+@media(max-width: 550px) {
+    section {
+        margin: 100px 20px 20px 20px;
+        padding: 20px 16px;
+    }
+    .album-tracks ol {
+        padding: 16px;
+    }
 }
