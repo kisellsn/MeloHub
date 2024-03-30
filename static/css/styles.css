@@ -117,9 +117,8 @@ ul {
     #song_covers_icon{
         opacity: 10;
         width: 50%;
+        position: relative;
     }
-
-
 }
 
 /* Для мобільної версії */

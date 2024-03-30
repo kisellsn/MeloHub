@@ -21,18 +21,28 @@
     </a>
 
     <nav>
-        <a href="static/templates/catalogue.html">CATALOGUE</a>
-        <a href="genres.html">GENRES</a>
-        <a href="podcasts.html">PODCASTS</a>
+        <div class="pages">
+            <a href="static/templates/catalogue.html">CATALOGUE</a>
+            <a href="genres.html">GENRES</a>
+            <a href="podcasts.html">PODCASTS</a>
+        </div>
+
+         <div id="search_icon_div">
+            <img id="search_icon"
+                 src="static/img/search.png"
+                 alt="search"/>
+            <a href="static/templates/login.html">
+                <button class="button-54" role="button" style="margin-top: 0">Sing Up</button>
+            </a>
+        </div>
     </nav>
-    <div id="search_icon_div">
-        <img id="search_icon"
-             src="static/img/search.png"
-             alt="search"/>
-        <a href="static/templates/login.html">
-            <button class="button-54" role="button" style="margin-top: 0">Sing Up</button>
-        </a>
+    <div id="menu_icon">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
     </div>
+
+
 
 
 </header>
@@ -121,6 +131,6 @@
         <li>Support: <a href="mailto:sonyakondratskaya@gmail.com">sonyakondratskaya@gmail.com</a></li>
     </ol>
 </footer>
-
+<script src="static/js/menu.js"></script>
 </body>
 </html>

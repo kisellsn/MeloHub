@@ -12,9 +12,34 @@ header a {
     color: white;
     text-decoration: none;
 }
-nav a{
+nav .pages a{
     padding-left: 10px;
     padding-right: 10px;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.pages {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+#menu_icon {
+    padding: 10px;
+    display: none;
+}
+.dot {
+    background: #fff;
+    border-radius: 50%;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+}
+.dot:last-child {
+    margin-right: 0;
 }
 header a:hover {
     color: #abcdef;
@@ -28,7 +53,7 @@ header a:hover {
     padding-right:10px;
 }
 #search_icon_div{
-    width: 145px;
+    width: 164px;
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
@@ -60,66 +85,42 @@ header a:hover {
 }
 
 .button-54:active {
-  box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
 }
 
 
 /* ----------------------BUTTON END------------------------*/
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    #search_icon_div {
+        width: 182px;
+    }
 
-.search-box{
-  width: fit-content;
-  height: fit-content;
-  position: relative;
+
 }
-.input-search{
-  height: 50px;
-  width: 50px;
-  border-style: none;
-  padding: 10px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  outline: none;
-  border-radius: 25px;
-  transition: all .5s ease-in-out;
-  background-color: #22a6b3;
-  padding-right: 40px;
-  color:#fff;
-}
-.input-search::placeholder{
-  color:rgba(255,255,255,.5);
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: 100;
-}
-.btn-search{
-  width: 50px;
-  height: 50px;
-  border-style: none;
-  font-size: 20px;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-  border-radius: 50%;
-  position: absolute;
-  right: 0px;
-  color:#ffffff ;
-  background-color:transparent;
-  pointer-events: painted;
-}
-.btn-search:focus ~ .input-search{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-.input-search:focus{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+
+@media (max-width: 767px) {
+    #menu_icon {
+        padding: 10px;
+        display: flex;
+    }
+    nav {
+        display: none;
+    }
+
+    nav a {
+        visibility: visible;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: black;
+        padding: 10px;
+    }
 }
