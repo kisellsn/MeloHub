@@ -137,4 +137,7 @@ ul {
     #song_covers_icon{
         display: none;
     }
+    #new_releases{
+        padding: 0;
+    }
 }
