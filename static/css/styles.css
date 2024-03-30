@@ -78,11 +78,8 @@ main{
 }
 
 #song_covers_icon{
-    opacity: 10;
-    width: 550px;
-    position: absolute;
-    top: 27%;
-    right: 3%;
+    max-width: 100%;
+    object-fit: cover;
 }
 ul {
     list-style-type: none;
@@ -121,8 +118,10 @@ ul {
     }
     #song_covers_icon{
         opacity: 10;
-        width: 50%;
-        position: relative;
+        width: 550px;
+        position: absolute;
+        top: 27%;
+        right: 3%;
     }
 }
 
@@ -136,7 +135,6 @@ ul {
         margin-bottom: 10px;
     }
     #song_covers_icon{
-        opacity: 10;
-        width: 50%;
+        display: none;
     }
 }
