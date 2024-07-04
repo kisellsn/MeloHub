@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <title>MeloHub-Albums</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/cleanstyles.css" />
-    <link rel="stylesheet" type="text/css" href="../css/album.css" />
-    <link rel="stylesheet" type="text/css" href="../css/player.css" />
-    <link rel="icon" type="image/x-icon" href="../img/logo_black.ico" />
+    <link rel="stylesheet" type="text/css" href="../static/css/cleanstyles.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/album.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/player.css" />
+    <link rel="icon" type="image/x-icon" href="../static/img/logo_black.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
 </head>
 <body>
 <header>
-    <a href="../../index.html" class="logo" >
+    <a href="index.html" class="logo" >
         <img class="image_logo"
-         src="../img/logo.png"
+         src="../static/img/logo.png"
          alt="MeloHub logo"/>
         <p>
             MELOHUB
@@ -30,9 +30,9 @@
 
          <div id="search_icon_div" onclick="window.location.href='search.html'">
             <img id="search_icon"
-                 src="../img/search.png"
+                 src="../static/img/search.png"
                  alt="search"/>
-            <a href="../templates/login.html">
+            <a href="login.html">
                 <button class="button-54" role="button" style="margin-top: 0">Sing Up</button>
             </a>
         </div>
@@ -48,16 +48,17 @@
         <section>
             <div class="album-info">
                 <div class="album-art">
-                    <img src="../img/cover.jpg" alt="Album Art">
+                    <img src="{{ album.cover.url }}" alt="Album Art">
                     <div class="actions">
                         <button class="play">Play</button>
                     </div>
                 </div>
                 <div class="album-details">
                     <h2>
-                        Skillet
+                        {{ album.name }}
+<!--                        if podcast :name elif album: artistname-->
                     </h2>
-                    <h1>Unleashed</h1>
+                    <h1>{{ album.name }}</h1>
                     <span>
                         <span>Hard Rock</span>
                         <span>&copy; 2016</span>
@@ -124,7 +125,7 @@
     <div id="container">
         <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
         <div id="song_info">
-            <img alt="" src="../img/cover.jpg"/>
+            <img alt="" src="../static/img/cover.jpg"/>
             <div id="song_title">
                 <h3>Title</h3>
                 <p>Author</p>

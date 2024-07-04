@@ -1,20 +1,22 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>MeloHub-Catalogue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/cleanstyles.css" />
-    <link rel="stylesheet" type="text/css" href="../css/catalogue.css" />
-    <link rel="stylesheet" type="text/css" href="../css/player.css" />
-    <link rel="icon" type="image/x-icon" href="../img/logo_black.ico" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/cleanstyles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/catalogue.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/player.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static '/img/logo_black.ico' %}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
 </head>
 <body>
 <header>
-    <a href="../../index.html" class="logo" >
+    <a href="index.html" class="logo" >
         <img class="image_logo"
-         src="../img/logo.png"
+         src="../static/img/logo.png"
          alt="MeloHub logo"/>
         <p>
             MELOHUB
@@ -23,9 +25,9 @@
 
     <div id="search_icon_div" onclick="window.location.href='search.html'">
         <img id="search_icon"
-             src="../img/search.png"
+             src="../static/img/search.png"
              alt="search"/>
-        <a href="../templates/login.html">
+        <a href="login.html">
             <button class="button-54" role="button" style="margin-top: 0">Sing Up</button>
         </a>
     </div>
@@ -64,21 +66,12 @@
     </section>
     <h2>PODCASTS</h2>
     <section id="podcasts" class="catalogue_section">
-        <button role="button" class="category_btn">
-            Text
-        </button>
-        <button role="button" class="category_btn">
-            Text
-        </button>
-        <button role="button" class="category_btn">
-            Text
-        </button>
-        <button role="button" class="category_btn">
-            Text
-        </button>
-        <button role="button" class="category_btn">
-            Text
-        </button>
+        {% for podcast in podcasts %}
+            <a href="{{ podcast.slug }}" class="category_btn">
+                <img src="{{ podcast.cover.url }}" alt="{{ podcast.name }}" style="width: 230px">
+                <p>{{ podcast.name }}</p>
+            </a>
+        {% endfor %}
     </section>
     <h2>GENRES</h2>
     <section id="genres" class="catalogue_section">
@@ -118,7 +111,7 @@
     <div id="container">
         <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
         <div id="song_info">
-            <img alt="" src="../img/cover.jpg"/>
+            <img alt="" src="../static/img/cover.jpg"/>
             <div id="song_title">
                 <h3>Title</h3>
                 <p>Author</p>

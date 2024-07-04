@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{podcast.name}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/cleanstyles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/album.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/player.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static '/img/logo_black.ico' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo" >
+        <img class="image_logo"
+         src="{% static '/img/logo.png' %}"
+         alt="MeloHub logo"/>
+        <p>
+            MELOHUB
+        </p>
+    </a>
+
+    <nav>
+        <div class="pages">
+            <a href="catalogue.html">CATALOGUE</a>
+            <a href="genres.html">GENRES</a>
+            <a href="podcasts.html">PODCASTS</a>
+        </div>
+
+         <div id="search_icon_div" onclick="window.location.href='search.html'">
+            <img id="search_icon"
+                 src="{% static '/img/search.png' %}"
+                 alt="search"/>
+            <a href="login.html">
+                <button class="button-54" role="button" style="margin-top: 0">Sing Up</button>
+            </a>
+        </div>
+    </nav>
+    <div id="menu_icon">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+    </div>
+</header>
+<main>
+    <div class="background" style="background-image: url({{ podcast.cover.url }})">
+        <section>
+            <div class="album-info">
+                <div class="album-art">
+                    <img src="{{ podcast.cover.url }}" alt="Album Art">
+                    <div class="actions">
+                        <button class="play">Play</button>
+                    </div>
+                </div>
+                <div class="album-details">
+                    <h2>
+                        {{ podcast.name }}
+                    </h2>
+                    <h1>{{ podcast.name }}</h1>
+                    <span>
+                        <span>{{ podcast.description }}</span>
+                        <span>&copy; {{ podcast.release_year }}</span>
+                    </span>
+                </div>
+            </div>
+            <div class="album-tracks">
+                <ol>
+                    {% for episode in episodes %}
+                        <li>
+                            <span>{{episode.name}}</span>
+                            <span>{{episode.duration}}</span>
+                        </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </section>
+    </div>
+
+</main>
+<footer>
+    <div id="container">
+        <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
+        <div id="song_info">
+            <img alt="" src="{{ podcast.cover.url }}"/>
+            <div id="song_title">
+                <h3>Title</h3>
+                <p>Author</p>
+            </div>
+        </div>
+        <div class="container-audio">
+            <audio controls  loop autoplay>
+               <source src="" type="audio/ogg">
+               Your browser dose not Support the audio Tag
+           </audio>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -29,7 +29,9 @@ main{
     object-fit: cover;
 }
 
-
+.album_info{
+    margin-bottom: 100px;
+}
 
 :root {
     --color: #faa700;
@@ -60,10 +62,10 @@ img {
 }
 
 section {
-    margin: 100px 56px;
+    margin: 50px 35px;
     padding: 20px 56px;
     color: #d3d3d3;
-    background: rgba(0, 0, 0, 0.36);
+    background: rgba(0, 0, 0, 0.42);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
@@ -75,12 +77,11 @@ section {
     float: left;
     width: 220px;
     margin-right: 20px;
-    margin-bottom: 20px;
 }
 
 .album-art img {
     width: 100%;
-    margin-bottom: 19px;
+    /*margin-bottom: 19px;*/
     box-shadow: 0 5px 60px -3px rgba(0, 0, 0, 0.18);
     object-fit: cover;
 }
